@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Анна Матвеева](https://up.htmlacademy.ru/htmlcss/23/user/693431).
-* Наставник: `Неизвестно`.
+* Наставник: [Егор Глебов] (https://htmlacademy.ru/profile/beast)
 
 ---
 
