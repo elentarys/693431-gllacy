@@ -52,32 +52,83 @@
       </ul>
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-<!---
+
         <form class="filters" action="/echo" method="get">
-          <label for="sort">Сортировка:</label>
-          <select class="sort" name="sort" id="sort">
-            <option value="popularity">по популярности</option>
-            <option value="cheap">сначала недорогие</option>
-            <option value="expensive">сначала дорогие</option>
-            <option value="fat">по жирности</option>
-          </select>
+          <div class="filters sort">
+            <div class="filters-title">
+              <p>Сортировка:</p>
+            </div>
+            <div class="filters-subject">
+              <select class="sort" name="sort" id="sort">
+                <option value="popularity">по популярности</option>
+                <option value="cheap">сначала недорогие</option>
+                <option value="expensive">сначала дорогие</option>
+                <option value="fat">по жирности</option>
+              </select>
+            </div>
+          </div>
 
-          <label for="cost">Цена:</label>
-          <input type="range" name="cost" min="0" max="1000" step="100">
+          <div class="filters cost">
+            <div class="filters-title">
+              <p>Цена: 100 руб. – 500 руб.</p>
+            </div>
+            <div class="filters-subject">
+              <input type="range" name="cost" id="cost" min="100" max="500" step="10">
+            </div>
+          </div>
 
-          <label for="fat">Жирность:</label>
-          <input type="radio" name="fat" id="fat" value="0%">
-          <input type="radio" name="fat" id="fat" value="до 10%">
-          <input type="radio" name="fat" id="fat" value="до 30%">
-          <input type="radio" name="fat" id="fat" value="выше 30%">
+          <fieldset>
+            <legend>Жирность:</legend>
+            <ul class="filters fat">
+              <li class="fat-option">
+                <input type="radio" name="fat" id="zero">
+                <label for="zero">0%</label>
+              </li>
+              <li class="fat-option">
+                <input type="radio" name="fat" id="first-value" checked>
+                <label for="first-value">до 10%</label>
+              </li>
+              <li class="fat-option">
+                <input type="radio" name="fat" id="second-value">
+                <label for="second-value">до 30%</label>
+              </li>
+              <li class="fat-option">
+                <input type="radio" name="fat" id="third-value">
+                <label for="third-value">выше 30%</label>
+              </li>
+            </ul>
+          </fieldset>
 
-          <label for="fillers">Наполнители:</label>
-          <input type="checkbox" name="fillers" id="fillers" value="">
-
+          <fieldset>
+            <legend>Наполнители:</legend>
+            <ul class="filters fillers">
+              <li class="fillers-option">
+                <input type="checkbox" name="fillers" id="chocolad" checked>
+                <label for="chocolad">шоколадные</label>
+              </li>
+              <li class="fillers-option">
+                <input type="checkbox" name="fillers" id="sugar" checked>
+                <label for="sugar">сахарные присыпки</label>
+              </li>
+              <li class="fillers-option">
+                <input type="checkbox" name="fillers" id="frut">
+                <label for="frut">фрукты</label>
+              </li>
+              <li class="fillers-option">
+                <input type="checkbox" name="fillers" id="syrup">
+                <label for="syrup">сиропы</label>
+              </li>
+              <li class="fillers-option">
+                <input type="checkbox" name="fillers" id="jam">
+                <label for="jam">джемы</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit" name="submit-button">Применить</button>
         </form>
 
       </section>
---->
+
       <section class="catalog">
         <div class="catalog-item-hover">
           <a class="button hover" href="#">Быстрый просмотр</a>
@@ -278,7 +329,7 @@
       </div>
       <div class="footer-copyright">
         <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy">
-        <p>Сделано в <a class="footer-copyright-link" href="#">HTML Academy</a> © 2017</p>
+        <p>Сделано в <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
       </div>
 
     </footer>

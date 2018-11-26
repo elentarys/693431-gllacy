@@ -5,6 +5,9 @@
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
+    <input type="radio" name="radio-1" id="radio-1" checked>
+    <input type="radio" name="radio-1" id="radio-2">
+    <input type="radio" name="radio-1" id="radio-3">
 
     <header class="main-header">
       <nav class="main-navigation">
@@ -24,14 +27,32 @@
           <li class="site-navigation-item"><a href="#">Доставка и оплата</a></li>
           <li class="site-navigation-item"><a href="#">О Компании</a></li>
         </ul>
-        <ul class="user-navigation">
-          <li class="user-navigation-item"><a class="search" href="#">Поиск</a></li>
-          <!-- place for form-->
-          <li class="user-navigation-item"><a class="login-link" href="#">Вход</a></li>
-          <!-- place for form-->
-          <li class="user-navigation-item"><a class="basket" href="#"></a>Пусто</li>
-          <!-- place for form-->
 
+        <ul class="user-navigation">
+          <li class="user-navigation-item">
+            <a class="search" href="#">Поиск</a>
+            <div class="pop-up search">
+              <form action="#" method="get">
+                <input type="search" name="full-search" id="search-field" placeholder="Что ищем?">
+              </form>
+            </div>
+          </li>
+
+          <li class="user-navigation-item">
+            <a class="login-link" href="#">Вход</a>
+            <div class="pop-up login">
+              <form action="#" method="post">
+                <input type="email" name="email" placeholder="Электронная почта">
+                <input type="password" name="password" placeholder="Пароль">
+                <div class="login-help">
+                  <a class="login-help-element" href="#">Забыли пароль?</a>
+                  <a class="login-help-element" href="#">Новая регистрация</a>
+                </div>
+                <button type="submit" name="login-button">Войти</button>
+              </form>
+            </div>
+          </li>
+          <li class="user-navigation-item"><a class="basket" href="#"></a>Пусто</li>
         </ul>
       </nav>
     </header>
@@ -44,12 +65,25 @@
         <span class="phone">8 812 450-25-25</span>
       </div>
 
-      <section class="inex-slides">
+      <section class="index-slides">
         <div class="radio-slides">
-          <!-- place for radio button in slides-->
+          <label for="radio-1"></label>
+          <label for="radio-2"></label>
+          <label for="radio-3"></label>
         </div>
+
         <div class="index-slides-first">
           <p class="slide title">Крем-брюле и пломбир с малиновым джемом</p>
+          <a class="button" href="#">Давайте оба!</a>
+        </div>
+
+        <div class="index-slides-second">
+          <p class="slide title">Шоколадный пломбир и лимонный сорбет </p>
+          <a class="button" href="#">Давайте оба!</a>
+        </div>
+
+        <div class="index-slides-second">
+          <p class="slide title">Пломбир с помадкой и клубничный щербет </p>
           <a class="button" href="#">Давайте оба!</a>
         </div>
       </section>
@@ -145,7 +179,10 @@
         <section class="subscription">
           <h3 class="visually-hidden">Подписка на рассылку</h3>
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <!-- place for form with email-->
+          <form class="subscription-spam" action="#" method="post">
+            <input type="email" name="subscription-email" placeholder="Электроная почта">
+            <button type="submit" name="subscription-agree">Отправить</button>
+          </form>
         </section>
       </section>
 
@@ -162,6 +199,21 @@
           <p class="connection-data title">(с 10 до 20 ежедневно)</p>
           <a class="button" href="#">Форма обратной связи</a>
         </section>
+      </section>
+
+      <section class="pop-up feedback">
+        <form class="pop-up-feedback" action="#" method="post">
+          <fieldset>
+            <legend class="pop-up title">Мы обязательно вам ответим!</legend>
+            <input type="text" name="first-name" placeholder="Как вас зовут?">
+            <input type="email" name="email-answer" placeholder="Ваша почта для ответа?">
+            <textarea name="client-feedback" rows="5" cols="50" placeholder="Напишите что-нибудь..."></textarea>
+            <button type="submit" name="button">Отправить</button>
+          </fieldset>
+        </form>
+        <div class="pop-up-close">
+          <a class="close visually-hidden" href="#">Закрыть</a>
+        </div>
       </section>
     </main>
 
@@ -184,7 +236,7 @@
       </div>
       <div class="footer-copyright">
         <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy">
-        <p>Сделано в <a class="footer-copyright-link" href="#">HTML Academy</a> © 2017</p>
+        <p>Сделано в <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
       </div>
 
     </footer>
