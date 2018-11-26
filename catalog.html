@@ -29,6 +29,7 @@
             <a class="search" href="#">Поиск</a>
             <div class="pop-up search">
               <form action="#" method="get">
+                <label for="search-field" class="visually-hidden">Поиск</label>
                 <input type="search" name="full-search" id="search-field" placeholder="Что ищем?">
               </form>
             </div>
@@ -38,8 +39,10 @@
             <a class="login-link" href="#">Вход</a>
             <div class="pop-up login">
               <form action="#" method="post">
-                <input type="email" name="email" placeholder="Электронная почта">
-                <input type="password" name="password" placeholder="Пароль">
+                <label for="login-email" class="visually-hidden">Электронная почта</label>
+                <input type="email" name="email" id="login-email" placeholder="Электронная почта">
+                <label for="login-password" class="visually-hidden">Пароль</label>
+                <input type="password" name="password" id="login-password" placeholder="Пароль">
                 <div class="login-help">
                   <a class="login-help-element" href="#">Забыли пароль?</a>
                   <a class="login-help-element" href="#">Новая регистрация</a>
@@ -92,6 +95,7 @@
               <p>Цена: 100 руб. – 500 руб.</p>
             </div>
             <div class="filters-subject">
+              <label for="cost" class="visually-hidden">Диапазон цены</label>
               <input type="range" name="cost" id="cost" min="100" max="500" step="10">
             </div>
           </div>

@@ -33,6 +33,7 @@
             <a class="search" href="#">Поиск</a>
             <div class="pop-up search">
               <form action="#" method="get">
+                <label for="search-field" class="visually-hidden">Поиск</label>
                 <input type="search" name="full-search" id="search-field" placeholder="Что ищем?">
               </form>
             </div>
@@ -42,8 +43,10 @@
             <a class="login-link" href="#">Вход</a>
             <div class="pop-up login">
               <form action="#" method="post">
-                <input type="email" name="email" placeholder="Электронная почта">
-                <input type="password" name="password" placeholder="Пароль">
+                <label for="login-email" class="visually-hidden">Электронная почта</label>
+                <input type="email" name="email" id="login-email" placeholder="Электронная почта">
+                <label for="login-password" class="visually-hidden">Пароль</label>
+                <input type="password" name="password" id="login-password" placeholder="Пароль">
                 <div class="login-help">
                   <a class="login-help-element" href="#">Забыли пароль?</a>
                   <a class="login-help-element" href="#">Новая регистрация</a>
@@ -205,9 +208,12 @@
         <form class="pop-up-feedback" action="#" method="post">
           <fieldset>
             <legend class="pop-up title">Мы обязательно вам ответим!</legend>
-            <input type="text" name="first-name" placeholder="Как вас зовут?">
-            <input type="email" name="email-answer" placeholder="Ваша почта для ответа?">
-            <textarea name="client-feedback" rows="5" cols="50" placeholder="Напишите что-нибудь..."></textarea>
+            <label for="first-name" class="visually-hidden">Имя</label>
+            <input type="text" name="first-name" id="first-name" placeholder="Как вас зовут?">
+            <label for="email-answer" class="visually-hidden">Почта для ответа</label>
+            <input type="email" name="email-answer" id="email-answer" placeholder="Ваша почта для ответа?">
+            <label for="client-feedback">Отзыв клиента</label>
+            <textarea name="client-feedback" id="client-feedback" rows="5" cols="50" placeholder="Напишите что-нибудь..."></textarea>
             <button type="submit" name="button">Отправить</button>
           </fieldset>
         </form>
