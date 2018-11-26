@@ -25,10 +25,29 @@
           <li class="site-navigation-item"><a href="#">О Компании</a></li>
         </ul>
         <ul class="user-navigation">
-          <li class="user-navigation-item"><a class="search" href="#">Поиск</a></li>
-          <!-- place for form-->
-          <li class="user-navigation-item"><a class="login-link" href="#">Вход</a></li>
-          <!-- place for form-->
+          <li class="user-navigation-item">
+            <a class="search" href="#">Поиск</a>
+            <div class="pop-up search">
+              <form action="#" method="get">
+                <input type="search" name="full-search" id="search-field" placeholder="Что ищем?">
+              </form>
+            </div>
+          </li>
+
+          <li class="user-navigation-item">
+            <a class="login-link" href="#">Вход</a>
+            <div class="pop-up login">
+              <form action="#" method="post">
+                <input type="email" name="email" placeholder="Электронная почта">
+                <input type="password" name="password" placeholder="Пароль">
+                <div class="login-help">
+                  <a class="login-help-element" href="#">Забыли пароль?</a>
+                  <a class="login-help-element" href="#">Новая регистрация</a>
+                </div>
+                <button type="submit" name="login-button">Войти</button>
+              </form>
+            </div>
+          </li>
           <li class="user-navigation-item"><a class="basket" href="#">2 товара</a></li>
           <!-- place for form-->
         </ul>
