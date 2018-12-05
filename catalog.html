@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="/css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
@@ -13,7 +16,7 @@
         </a>
         <ul class="site-navigation">
           <li class="site-navigation-item"><a href="#">Каталог</a>
-            <ul class="site-navigation-catalog">
+            <ul class="site-navigation-catalog visually-hidden">
               <li class="site-navigation-catalog-item"><a href="#">Новинки</a></li>
               <li class="site-navigation-catalog-item"><a href="catalog.html">Сливочное</a></li>
               <li class="site-navigation-catalog-item"><a href="#">Щербеты</a></li>
@@ -68,9 +71,9 @@
         </div>
       </div>
       <ul class="breadcrumbs">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li class="breadcrumbs-current"> <a>Сливочное</a></li>
+        <li class="breadcrumbs-item"> <a href="index.html">Главная</a></li>
+        <li class="breadcrumbs-item"> <a href="#">Каталог</a></li>
+        <li class="breadcrumbs-item"> <a>Сливочное</a></li>
       </ul>
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
@@ -88,7 +91,7 @@
             </div>
           </div>
 
-          <div class="filters cost">
+          <div class="filters-cost">
               <p>Цена: 100 руб. – 500 руб.</p>
             <div class="filters-subject">
               <label for="cost" class="visually-hidden">Диапазон цены</label>
@@ -97,7 +100,7 @@
           </div>
 
           <fieldset>
-            <legend>Жирность:</legend>
+            <legend class="filters-title">Жирность:</legend>
             <ul class="filters fat">
               <li class="fat-option">
                 <input type="radio" name="fat" id="zero">
@@ -119,7 +122,7 @@
           </fieldset>
 
           <fieldset>
-            <legend>Наполнители:</legend>
+            <legend class="filters-title">Наполнители:</legend>
             <ul class="filters fillers">
               <li class="fillers-option">
                 <input type="checkbox" name="fillers" id="chocolad" checked>
@@ -143,7 +146,7 @@
               </li>
             </ul>
           </fieldset>
-          <button type="submit" name="submit-button">Применить</button>
+          <button type="submit" name="submit-button" class="fillers-button">Применить</button>
         </form>
 
       </section>
