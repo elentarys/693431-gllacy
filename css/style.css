@@ -303,7 +303,10 @@ input[type=email] {
   text-align: left;
 }
 
-.fillers-button {
+.filters-button {
+  font-size: 16px;
+  text-align: left;
+  line-height: 18px;
 
   padding: 12px 30px 9px;
 
@@ -313,6 +316,20 @@ input[type=email] {
   border: 2px solid #ffffff;
   border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.188);
+}
+
+.filters-button:hover,
+.filters-button:focus {
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.filters-button:active {
+  border: none;
+  color: #323232;
+
+  box-shadow: inset 0px 2px 1px 0 #696969;
+  background-color: #ededed;
 }
 
 .pagination-list {
