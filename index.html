@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <ul class="switch-slides">
+    <ul class="switch-slides visually-hidden">
       <li class="slides-radio">
         <button class="slides-btn visually-hidden">Первый слайд</button>
       </li>
@@ -21,14 +21,14 @@
     </ul>
 
     <header class="main-header">
+      <a class="main-header-logo">
+        <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Gllacy Shop»">
+      </a>
       <nav class="main-navigation">
-        <a class="main-header-logo">
-          <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Gllacy Shop»">
-        </a>
         <ul class="site-navigation">
           <li class="site-navigation-item"><a href="#">Каталог</a>
             <ul class="site-navigation-catalog visually-hidden">
-              <li class="site-navigation-catalog-item"><a href="#">Новинки</a></li>
+              <li class="site-navigation-catalog-item"><a class="navigation-link" href="#">Новинки</a></li>
               <li class="site-navigation-catalog-item"><a href="catalog.html">Сливочное</a></li>
               <li class="site-navigation-catalog-item"><a href="#">Щербеты</a></li>
               <li class="site-navigation-catalog-item"><a href="#">Фруктовый лед</a></li>
@@ -38,12 +38,14 @@
           <li class="site-navigation-item"><a href="#">Доставка и оплата</a></li>
           <li class="site-navigation-item"><a href="#">О Компании</a></li>
         </ul>
+      </nav>
+
 
         <ul class="user-navigation">
           <li class="user-navigation-item">
             <a class="search" href="#">Поиск</a>
             <div class="pop-up search">
-              <form action="#" method="get">
+              <form class="search-form" action="#" method="get">
                 <label for="search-field" class="visually-hidden">Поиск</label>
                 <input type="search" name="full-search" id="search-field" placeholder="Что ищем?">
               </form>
@@ -71,17 +73,16 @@
             <a class="basket" href="#">Пусто</a>
           </li>
         </ul>
-      </nav>
+
+        <div class="connection">
+          <span class="working-hours">С 10 до 20, ежедневно</span>
+          <span class="phone">8 812 450-25-25</span>
+        </div>
+
     </header>
 
     <main class="container">
       <h1 class="visually-hidden">Магазин Глэйси</h1>
-
-      <div class="connection">
-        <span class="working-hours">С 10 до 20, ежедневно</span>
-        <span class="phone">8 812 450-25-25</span>
-      </div>
-
       <section class="index-slides">
         <div class="index-slides-first">
           <p class="slide-title">Крем-брюле и пломбир с малиновым джемом</p>
@@ -90,12 +91,12 @@
 
         <div class="index-slides-second visually-hidden">
           <p class="slide-title">Шоколадный пломбир и лимонный сорбет </p>
-          <a class="button" href="#">Давайте оба!</a>
+          <a class="index-slides button" href="#">Давайте оба!</a>
         </div>
 
         <div class="index-slides-third visually-hidden">
           <p class="slide-title">Пломбир с помадкой и клубничный щербет </p>
-          <a class="button" href="#">Давайте оба!</a>
+          <a class="index-slides button" href="#">Давайте оба!</a>
         </div>
       </section>
 
@@ -114,7 +115,7 @@
 
       <section class="catalog">
         <div class="catalog-item-hover">
-          <a class="button visually-hidden" href="#">Быстрый просмотр</a>
+          <a class="button" href="#">Быстрый просмотр</a>
           <div class="catalog-item-visible">
             <img src="img/hit.png" class="hit" width="61" height="61" alt="хит!">
             <a href="#">
@@ -128,7 +129,7 @@
           </div>
         </div>
         <div class="catalog-item-hover">
-          <a class="button visually-hidden" href="#">Быстрый просмотр</a>
+          <a class="button" href="#">Быстрый просмотр</a>
           <div class="catalog-item-visible">
             <img src="img/hit.png" class="hit" width="61" height="61" alt="хит!">
             <a href="#">
@@ -142,7 +143,7 @@
           </div>
         </div>
         <div class="catalog-item-hover">
-          <a class="button visually-hidden" href="#">Быстрый просмотр</a>
+          <a class="button" href="#">Быстрый просмотр</a>
           <div class="catalog-item-visible">
             <img src="img/hit.png" class="hit" width="61" height="61" alt="хит!">
             <a href="#">
@@ -156,13 +157,13 @@
           </div>
         </div>
         <div class="catalog-item-hover">
-          <a class="button visually-hidden" href="#">Быстрый просмотр</a>
+          <a class="button" href="#">Быстрый просмотр</a>
           <div class="catalog-item-visible">
             <img src="img/hit.png" class="hit" width="61" height="61" alt="хит!">
             <a href="#">
               <h3>Сливочное крем-брюле с карамельной подливкой</h3>
             </a>
-            <img src="img/catalog-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой">
+            <img class="bestseller" src="img/catalog-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой">
             <div class="cost">
               <p>415₽</p>
               <span class="measure">/кг</span>
@@ -174,10 +175,10 @@
       <article class="info">
         <p class="info-title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
         <ul class="info-list">
-          <li class="info-list left">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-          <li class="info-list left">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </li>
-          <li class="info-list right">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-          <li class="info-list right">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+          <li class="info-list-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+          <li class="info-list-item">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+          <li class="info-list-item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </li>
+          <li class="info-list-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
         </ul>
       </article>
 
@@ -192,12 +193,14 @@
           </div>
         </section>
         <section class="subscription">
-          <h3 class="visually-hidden">Подписка на рассылку</h3>
-          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <form class="subscription-spam" action="#" method="post">
-            <input type="email" name="subscription-email" placeholder="Электроная почта">
-            <button type="submit" name="subscription-agree" class="button">Отправить</button>
-          </form>
+          <div class="subscription-wrap">
+            <h3 class="visually-hidden">Подписка на рассылку</h3>
+            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+            <form class="subscription-spam" action="#" method="post">
+              <input type="email" name="subscription-email" placeholder="Электроная почта">
+              <button type="submit" name="subscription-agree" class="button">Отправить</button>
+            </form>
+          </div>
         </section>
       </section>
 
@@ -236,8 +239,8 @@
     </main>
 
     <footer class="main-footer">
-      <div class="footer-social">
-        <ul>
+      <div>
+        <ul class="footer-social">
           <li><a class="social-button twit" href="#"> <img src="img/twitter.svg" width="38" height="38" alt="Мы в Твиттере!">Твиттер</a></li>
           <li><a class="social-button inst" href="#"> <img src="img/instagram.svg" width="38" height="38" alt="Мы в Инстаграме!">Инстаграм</a></li>
           <li><a class="social-button face" href="#"> <img src="img/fb.svg" width="38" height="38" alt="Мы в Фейсбуке!">Фейсбук</a></li>
