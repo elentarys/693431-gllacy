@@ -10,14 +10,14 @@
   <body>
 
     <header class="main-header">
+      <a class="main-header-logo">
+        <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Gllacy Shop»">
+      </a>
       <nav class="main-navigation">
-        <a class="main-header-logo">
-          <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Gllacy Shop»">
-        </a>
         <ul class="site-navigation">
-          <li class="site-navigation-item"><a href="#">Каталог</a>
+          <li class="site-navigation-item site-navigation-item-active"><a href="#">Каталог</a>
             <ul class="site-navigation-catalog visually-hidden">
-              <li class="site-navigation-catalog-item"><a href="#">Новинки</a></li>
+              <li class="site-navigation-catalog-item"><a class="navigation-link" href="#">Новинки</a></li>
               <li class="site-navigation-catalog-item"><a href="catalog.html">Сливочное</a></li>
               <li class="site-navigation-catalog-item"><a href="#">Щербеты</a></li>
               <li class="site-navigation-catalog-item"><a href="#">Фруктовый лед</a></li>
@@ -27,11 +27,14 @@
           <li class="site-navigation-item"><a href="#">Доставка и оплата</a></li>
           <li class="site-navigation-item"><a href="#">О Компании</a></li>
         </ul>
+      </nav>
+
+
         <ul class="user-navigation">
           <li class="user-navigation-item">
             <a class="search" href="#">Поиск</a>
             <div class="pop-up search">
-              <form action="#" method="get">
+              <form class="search-form" action="#" method="get">
                 <label for="search-field" class="visually-hidden">Поиск</label>
                 <input type="search" name="full-search" id="search-field" placeholder="Что ищем?">
               </form>
@@ -54,32 +57,33 @@
               </form>
             </div>
           </li>
-          <li class="user-navigation-item"><a class="basket" href="#">2 товара</a></li>
-          <!-- place for form-->
+
+          <li class="user-navigation-item">
+            <a class="basket" href="#">Пусто</a>
+          </li>
         </ul>
-      </nav>
+
+        <div class="connection">
+          <span class="working-hours">С 10 до 20, ежедневно</span>
+          <span class="phone">8 812 450-25-25</span>
+        </div>
+
     </header>
 
     <main>
-
-      <h1 class="page-title">Сливочное мороженое</h1>
-
-      <div class="container-breadcrumbs-and-connection">
-        <div class="connection">
-          <span class="working hours">С 10 до 20, ежедневно</span>
-          <span class="phone">8 812 450-25-25</span>
-        </div>
-      </div>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item"> <a href="index.html">Главная</a></li>
         <li class="breadcrumbs-item"> <a href="#">Каталог</a></li>
         <li class="breadcrumbs-item"> <a>Сливочное</a></li>
       </ul>
-      <section class="filters">
+
+      <h1 class="page-title">Сливочное мороженое</h1>
+
+      <section>
         <h2 class="visually-hidden">Фильтр товаров</h2>
 
         <form class="filters" action="/echo" method="get">
-          <div class="filters sort">
+          <div class="filters-sort">
               <p class="filters-title">Сортировка:</p>
             <div class="filters-subject">
               <select class="sort" name="sort" id="sort">
@@ -99,9 +103,9 @@
             </div>
           </div>
 
-          <fieldset>
+          <fieldset class="filters-fat-wrap">
             <legend class="filters-title">Жирность:</legend>
-            <ul class="filters fat">
+            <ul class="filters-fat">
               <li class="fat-option">
                 <input type="radio" name="fat" id="zero">
                 <label for="zero">0%</label>
@@ -121,9 +125,9 @@
             </ul>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="filters-filters-wrap">
             <legend class="filters-title">Наполнители:</legend>
-            <ul class="filters fillers">
+            <ul class="filters-fillers">
               <li class="fillers-option">
                 <input type="checkbox" name="fillers" id="chocolad" checked>
                 <label for="chocolad">шоколадные</label>
@@ -151,7 +155,7 @@
 
       </section>
 
-      <section class="catalog">
+      <section class="catalog catalog-inner">
         <div class="catalog-item-hover">
           <a class="button hover" href="#">Быстрый просмотр</a>
           <div class="catalog-item-visible">
@@ -320,21 +324,21 @@
           </div>
         </div>
 
-        <ul class="pagination-list">
-          <li class="pagination-item-back"><a href="#">Назад</a></li>
-          <li class="pagination-item pagination-item-current"><a>1</a></li>
-          <li class="pagination-item"><a href="#">2</a></li>
-          <li class="pagination-item"><a href="#">3</a></li>
-          <li class="pagination-item"><a href="#">4</a></li>
-          <li class="pagination-item"><a href="#">5</a></li>
-          <li class="pagination-item-next"><a href="#">Вперед</a></li>
-        </ul>
       </section>
+      <ul class="pagination-list">
+        <li class="pagination-item-back"><a href="#">Назад</a></li>
+        <li class="pagination-item pagination-item-current"><a>1</a></li>
+        <li class="pagination-item"><a href="#">2</a></li>
+        <li class="pagination-item"><a href="#">3</a></li>
+        <li class="pagination-item"><a href="#">4</a></li>
+        <li class="pagination-item"><a href="#">5</a></li>
+        <li class="pagination-item-next"><a href="#">Вперед</a></li>
+      </ul>
     </main>
 
     <footer class="main-footer">
-      <div class="footer-social">
-        <ul>
+      <div>
+        <ul class="footer-social">
           <li><a class="social-button twit" href="#"> <img src="img/twitter.svg" width="38" height="38" alt="Мы в Твиттере!">Твиттер</a></li>
           <li><a class="social-button inst" href="#"> <img src="img/instagram.svg" width="38" height="38" alt="Мы в Инстаграме!">Инстаграм</a></li>
           <li><a class="social-button face" href="#"> <img src="img/fb.svg" width="38" height="38" alt="Мы в Фейсбуке!">Фейсбук</a></li>
