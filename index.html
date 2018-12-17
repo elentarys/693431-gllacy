@@ -26,46 +26,59 @@
       </a>
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li class="site-navigation-item"><a href="#">Каталог</a>
-            <ul class="site-navigation-catalog visually-hidden">
-              <li class="site-navigation-catalog-item"><a class="navigation-link" href="#">Новинки</a></li>
-              <li class="site-navigation-catalog-item"><a href="catalog.html">Сливочное</a></li>
-              <li class="site-navigation-catalog-item"><a href="#">Щербеты</a></li>
-              <li class="site-navigation-catalog-item"><a href="#">Фруктовый лед</a></li>
-              <li class="site-navigation-catalog-item"><a href="#">Мелорин</a></li>
-            </ul>
+          <li class="site-navigation-item site-navigation-item-catalog">
+            <a class="site-navigation-link" href="#">Каталог</a>
+            <div class="show-menu">
+              <ul class="site-navigation-catalog">
+                <li class="site-navigation-catalog-item">
+                  <a class="site-navigation-catalog-link site-navigation-catalog-link-new" href="#">Новинки</a>
+                </li>
+                <li class="site-navigation-catalog-item">
+                  <a class="site-navigation-catalog-link" href="catalog.html">Сливочное</a>
+                </li>
+                <li class="site-navigation-catalog-item">
+                  <a class="site-navigation-catalog-link" href="#">Щербеты</a>
+                </li>
+                <li class="site-navigation-catalog-item">
+                  <a class="site-navigation-catalog-link" href="#">Фруктовый лед</a>
+                </li>
+                <li class="site-navigation-catalog-item">
+                  <a class="site-navigation-catalog-link" href="#">Мелорин</a>
+                </li>
+              </ul>
+            </div>
           </li>
-          <li class="site-navigation-item"><a href="#">Доставка и оплата</a></li>
-          <li class="site-navigation-item"><a href="#">О Компании</a></li>
+          <li class="site-navigation-item"><a class="site-navigation-link" href="#">Доставка и оплата</a></li>
+          <li class="site-navigation-item"><a class="site-navigation-link" href="#">О Компании</a></li>
         </ul>
       </nav>
 
 
         <ul class="user-navigation">
           <li class="user-navigation-item">
-            <a class="search" href="#">Поиск</a>
-            <div class="pop-up search">
+            <a class="search-icon" href="#">Поиск</a>
+            <div class="pop-up-search">
               <form class="search-form" action="#" method="get">
                 <label for="search-field" class="visually-hidden">Поиск</label>
-                <input type="search" name="full-search" id="search-field" placeholder="Что ищем?">
+                <input type="search" name="full-search" class="full-search" id="search-field" placeholder="Что ищем?">
               </form>
             </div>
           </li>
 
           <li class="user-navigation-item">
             <a class="login-link" href="#">Вход</a>
-            <div class="pop-up login">
-              <form action="#" method="post">
+            <div class="pop-up-login">
+              <form class="login-form-wrapper" action="#" method="post">
                 <label for="login-email" class="visually-hidden">Электронная почта</label>
                 <input type="email" name="email" id="login-email" placeholder="Электронная почта">
                 <label for="login-password" class="visually-hidden">Пароль</label>
                 <input type="password" name="password" id="login-password" placeholder="Пароль">
+                <button class="button" type="submit" name="login-button">Войти</button>
                 <div class="login-help">
                   <a class="login-help-element" href="#">Забыли пароль?</a>
                   <a class="login-help-element" href="#">Новая регистрация</a>
                 </div>
-                <button type="submit" name="login-button">Войти</button>
-              </form>
+             </form>
             </div>
           </li>
 
@@ -115,7 +128,7 @@
 
       <section class="catalog">
         <div class="catalog-item-hover">
-          <a class="button" href="#">Быстрый просмотр</a>
+          <a class="button hover" href="#">Быстрый просмотр</a>
           <div class="catalog-item-visible">
             <img src="img/hit.png" class="hit" width="61" height="61" alt="хит!">
             <a href="#">
@@ -129,7 +142,7 @@
           </div>
         </div>
         <div class="catalog-item-hover">
-          <a class="button" href="#">Быстрый просмотр</a>
+          <a class="button hover" href="#">Быстрый просмотр</a>
           <div class="catalog-item-visible">
             <img src="img/hit.png" class="hit" width="61" height="61" alt="хит!">
             <a href="#">
@@ -143,7 +156,7 @@
           </div>
         </div>
         <div class="catalog-item-hover">
-          <a class="button" href="#">Быстрый просмотр</a>
+          <a class="button hover" href="#">Быстрый просмотр</a>
           <div class="catalog-item-visible">
             <img src="img/hit.png" class="hit" width="61" height="61" alt="хит!">
             <a href="#">
@@ -157,7 +170,7 @@
           </div>
         </div>
         <div class="catalog-item-hover">
-          <a class="button" href="#">Быстрый просмотр</a>
+          <a class="button hover" href="#">Быстрый просмотр</a>
           <div class="catalog-item-visible">
             <img src="img/hit.png" class="hit" width="61" height="61" alt="хит!">
             <a href="#">
@@ -175,10 +188,10 @@
       <article class="info">
         <p class="info-title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
         <ul class="info-list">
-          <li class="info-list-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-          <li class="info-list-item">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-          <li class="info-list-item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </li>
-          <li class="info-list-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+          <li class="info-list-item info-list-item-tech">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+          <li class="info-list-item info-list-item-buy">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+          <li class="info-list-item info-list-item-made">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </li>
+          <li class="info-list-item info-list-item-pack">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
         </ul>
       </article>
 
@@ -245,20 +258,33 @@
           <li><a class="social-button face" href="#"> <img src="img/fb.svg" width="38" height="38" alt="Мы в Фейсбуке!">Фейсбук</a></li>
           <li><a class="social-button vk" href="#"> <img src="img/vk.svg" width="38" height="38" alt="Мы Вконтакте!">Вконтакте</a></li>
         </ul>
-      <div class="footer-links">
-        <ul class="footer-links-list">
-          <li class="footer-links-item"><a href="#">Для поставщиков</a></li>
-          <li class="footer-links-item"><a href="#">О производстве</a></li>
-          <li class="footer-links-item"><a href="#">Наши документы</a></li>
-          <li class="footer-links-item"><a href="#">Экологические стандарты</a></li>
-        </ul>
-      </div>
+        <div class="footer-links">
+          <ul class="footer-links-list">
+            <li class="footer-links-item"><a class="footer-links-item-provider" href="#">Для поставщиков</a></li>
+            <li class="footer-links-item"><a class="footer-links-item-doc" href="#">Наши документы</a></li>
+            <li class="footer-links-item"><a class="footer-links-item-product" href="#">О производстве</a></li>
+            <li class="footer-links-item"><a class="footer-links-item-eco" href="#">Экологические стандарты</a></li>
+          </ul>
+        </div>
       <div class="footer-copyright">
         <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy">
         <p>Сделано в <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
       </div>
-
     </footer>
+     <div class="show-feedback-form overlay-pop-up"></div>
+    <div class="dialog-feedback-form">
+      <h2 class="dialog-feedback-form-title">Мы обязательно вам ответим!</h2>
+      <form class="feedback-form" action="#" method="post">
+        <input type="text" name="first-name" class="first-name" id="first-name" placeholder="Как вас зовут?">
+        <label class="visually-hidden" for="first-name">Как вас зовут</label>
+        <input type="email" name="email-for-answer" class="email-for-answer" id="email-for-answer" placeholder="Ваша почта для ответа?">
+        <label class="visually-hidden" for="email-for-answer">Ваша почта для ответа</label>
+        <textarea name="feedback-textarea" class="feedback-textarea" rows="7" cols="30" id="feedback-textarea" placeholder="Напишите что-нибудь..."></textarea>
+        <label for="feedback-textarea" class="visually-hidden"></label>
+        <button type="submit" class="button feedback-form-button">Отправить</button>
+      </form>
+      <button type="button" name="button" class="feedback-form-close"></button>
+    </div>
 
   </body>
 </html>
