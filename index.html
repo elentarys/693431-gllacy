@@ -5,7 +5,7 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="/css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/min.style.css" rel="stylesheet">
   </head>
   <body>
     <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
@@ -67,9 +67,9 @@
                   <div class="pop-up-login">
                     <form class="login-form-wrapper" action="#" method="post">
                       <label for="login-email" class="visually-hidden">Электронная почта</label>
-                      <input type="email" name="email" id="login-email" placeholder="Электронная почта">
+                      <input type="email" name="email" id="login-email" placeholder="Электронная почта" required>
                       <label for="login-password" class="visually-hidden">Пароль</label>
-                      <input type="password" name="password" id="login-password" placeholder="Пароль">
+                      <input type="password" name="password" id="login-password" placeholder="Пароль" required>
                       <button class="button" type="submit" name="login-button">Войти</button>
                       <div class="login-help">
                         <a class="login-help-element" href="#">Забыли пароль?</a>
@@ -221,8 +221,8 @@
           </section>
 
           <section class="map">
-            <img src="img/map_before_frame.jpg" width="1200" height="430" alt="Карта проезда">
-            <!-- place for frame with map from google-->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.608324400486!2d30.3234015!3d59.9386412!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1545563718372" width="1200" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <img src="img/map_before_frame.jpg" width="1200" height="430" alt="Карта проезда">
             <section class="connection-data">
               <p class="connection-data-title">Адрес главного офиса <br> и офлайн-магазина:</br>
                 <span class="connection-data-description">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
@@ -231,7 +231,7 @@
                 <span class="connection-data-description">8 812 450-25-25</span>
               </p>
               <p class="connection-data-title">(с 10 до 20 ежедневно)</p>
-              <a class="button" href="#">Форма обратной связи</a>
+              <a class="button link-feedback-form" href="#">Форма обратной связи</a>
             </section>
           </section>
         </main>
@@ -256,7 +256,7 @@
             <p>Сделано в <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
           </div>
         </footer>
-        <div class="show-feedback-form overlay-pop-up visually-hidden"></div>
+        <div class="show-feedback-form overlay-pop-up"></div>
         <div class="dialog-feedback-form">
           <h2 class="dialog-feedback-form-title">Мы обязательно вам ответим!</h2>
           <form class="feedback-form" action="#" method="post">
@@ -272,5 +272,6 @@
         </div>
       </div>
     </div>
+    <script src="js\min.script.js"></script>
   </body>
 </html>
