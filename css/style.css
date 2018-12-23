@@ -377,10 +377,10 @@ img {
   font-size: 14px;
 }
 
-.search-icon:focus + .pop-up-search,
-.search-icon:hover + .pop-up-search {
+.search-icon-wrap:focus > .pop-up-search,
+.search-icon-wrap:hover > .pop-up-search {
   display: block;
-  z-index: 10;
+  z-index: 13;
   opacity: 1;
 }
 
@@ -631,18 +631,18 @@ img {
   padding: 11px 26px 10px 23px;
 }
 
-.user-navigation-item:focus .search-icon::after,
-.user-navigation-item:hover .search-icon::after {
+.search-icon-wrap:focus .search-icon::after,
+.search-icon-wrap:hover .search-icon::after {
   background-position: -842px -10px;
 }
 
-.user-navigation-item:focus .login-link::before,
-.user-navigation-item:hover .login-link::before {
+.login-link-wrap:focus .login-link::before,
+.login-link-wrap:hover .login-link::before {
   background-position: -551px -10px;
 }
 
-.login-link:focus + .pop-up-login,
-.login-link:hover + .pop-up-login {
+.login-link-wrap:focus > .pop-up-login,
+.login-link-wrap:hover > .pop-up-login {
   display: block;
   z-index: 10;
   opacity: 1;
@@ -672,7 +672,7 @@ img {
   width: 21px;
   height: 22px;
   content: "";
-  background: url(../img/sprites.png) -51px -10px; no-repeat;
+  background: url(../img/sprites.png) -51px -10px no-repeat;
 }
 
 .connection {
